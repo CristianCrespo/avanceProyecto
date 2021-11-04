@@ -1,7 +1,35 @@
-#caja{
-    margin-bottom: 2px;
+/*---------------PRODUCTOS--------------- */ 
+#agregarP{margin-left: 85px;}
+
+#product{margin-left: 65px;}
+
+/*---------------LINKS--------------- */ 
+a:link {text-decoration: none;}
+a:hover {color: #f860ab;}
+a{color:black}
+a:active {color: blue;}
+
+/*---------------HEADER---------------*/
+.avatar{
+    height:150px;
+    width: 150px;
+    border-radius: 50%;
 }
 
-#agregarP{
-    margin-left: 85px;
+#cabeza{
+    margin-top: 50px;
 }
+
+/*---------------BODY---------------*/
+.container{
+    /*margin-top: 50px;*/
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.body{
+    padding-top: 50px;
+    padding-bottom: 500px;
+    background-color: #5d3a75;
+}
+

@@ -20,15 +20,15 @@ export default function ProductosForm(props){
     return(
         <form onSubmit={onSubmitForm}>
             <div className="mb-2">
-                <label htmlFor="nameProduct" className="form-label">Nombre</label>
+                <label htmlFor="nameProduct" className="form-label">Nombre:</label>
                 <input type="text" name="nombre" className="form-control" id="nameProduct" value={estadoForm.nombre} onChange={formAgg} />
             </div>
             <div className="mb-3">
-                <label htmlFor="precio" className="form-label">Precio</label>
+                <label htmlFor="precio" className="form-label">Precio:</label>
                 <input type="text" name="precio" className="form-control" id="precio" value={estadoForm.precio} onChange={formAgg}/>
             </div>
-            <div className="mb-3">
-                <button type="submit" className="btn btn-primary">agregar</button>
+            <div className="mb-3 d-flex justify-content-center">
+                <button type="submit" className="btn btn-outline-success">Agregar</button>
             </div>
         </form> 
     );

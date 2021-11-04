@@ -34,12 +34,24 @@ const GridProduct = () => {
             </div>
 
             <div className="row">
-                <div className="col-8">
-                    {
-                        productoInicial.map (p => (<ProductItem producto ={p}/> ))
-                    }
+                <div className="col-md-7 col-12" id="product">
+                    <div className="row ">
+                        {
+                            productoInicial.map (p => (
+                            <div className="col-4 border" id="item">
+                                <div className="btn-group mt-2" role="group" aria-label="Third group">
+                                    <button type="button" className="btn btn-outline-warning"><i className="bi bi-pencil"></i></button>
+                                    <button type="button" className="btn btn-outline-danger"><i className="bi bi-x-square"></i></button>
+                                </div>
+                                
+                                <ProductItem producto ={p}/>
+                            </div>
+                            ))
+                        }
+                    </div>
                 </div>
-                <div className="col-3 border" id="agregarP">
+                <div className="col-md-3 col-sm-3 border" id="agregarP">
+                    <h2 className="text-center">Nuevo Producto</h2>
                     <ProductosForm agregar={agregarFormulario}/>
                 </div>
             </div>

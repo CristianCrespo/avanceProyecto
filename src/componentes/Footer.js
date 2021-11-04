@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = props =>{
     return (
-        <div className="text-center ">
+        <div className="text-center" id="footer">
             <hr></hr>
             <p> Copyright 2021</p>
         </div>

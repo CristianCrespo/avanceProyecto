@@ -6,6 +6,7 @@ import Footer from "./componentes/Footer";
 import MisRutas from './MisRutas';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartContextProvider from './context/CartContex';
 
 //import GridProduct from "./componentes/GridProduct";
 //import ProductItem from "./componentes/ProductItem";
@@ -18,14 +19,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Route>
-      <div className="container">
-        <Header/>
-        <MisRutas/>
-        <Footer/>
-      </div>
-    </Route>
+    <div className="body ">
+      <CartContextProvider>
+        <Route>
+        <div className="container border rounded">
+          <Header/>
+          <MisRutas/>
+          <Footer/>
+        </div>
+        </Route>
+      </CartContextProvider>
+    </div>
   );
 }
-
 export default App;
