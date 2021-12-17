@@ -1,22 +1,33 @@
 import React, { useState } from "react";
+import PlaceServices from '../services/PlaceServices';
 
 export default function ProductosForm(props){
     const formInicial = {
         nombre: '',
         precio : ''
     };
-
     const [estadoForm, setFormulario] = useState(formInicial);
 
     const formAgg = ev => {
         const {name, value} = ev.target;
         setFormulario({...estadoForm,[name]:value});
     }
+
+
     const onSubmitForm = event => {
         event.preventDefault();
+        (async()=>{
+            try {
+                await PlaceServices.create(estadoForm);
+            } catch (error) {
+                console.log(error);
+            }
+        })();
         props.agregar(estadoForm);
         setFormulario(formInicial);
     }
+
+
     return(
         <form onSubmit={onSubmitForm}>
             <div className="mb-2">

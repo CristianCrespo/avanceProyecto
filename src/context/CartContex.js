@@ -1,5 +1,5 @@
 import React, {createContext, useReducer} from "react";
-import {CartReducer, sumItems} from "./CarReducer";
+import {CartReducer} from "./CarReducer";
 
 const initialState = {
     cartItems: [],

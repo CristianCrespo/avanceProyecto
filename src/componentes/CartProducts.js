@@ -17,7 +17,6 @@ const CartProducts = () => {
                         )):<span className="text-center">No se encontro Items</span>}
                     </div>
                 </div>
-                
                 <div className="col-3 py-3">
                     <div className="card  mb-3 py-2 ">
                         <h5 className="card-title text-center">Total de productos</h5>

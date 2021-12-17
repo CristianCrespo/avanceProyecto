@@ -5,7 +5,6 @@ const CartItem = ({ product }) => {
     console.log("===============0000000000")
     console.log(product);
     const {nombre, precio} = product
-
     const { increase, decrease, removeProduct } = useContext(CartContext);
 
     return (

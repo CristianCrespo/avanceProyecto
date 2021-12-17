@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContex";
-// <ListaItem/>
-// <PropietariosForm onSubmit={this.handleSubmit}/>
+
+
 const ProductItem = (props)=>{
     const {nombre, precio} = props.producto
     const {addProduct, cartItems, increase} = useContext(CartContext);
 
-    
-
     const isInCart = (product) => {
         return !!cartItems.find((item) => item.id === product.id);
     };
-        
+
+    
+
         return(
             <div className="item">
                 <div className="row ">
@@ -29,7 +29,7 @@ const ProductItem = (props)=>{
                             <div>
                                 {isInCart(props.producto) && (
                                     <button onClick={(ev) => {ev.preventDefault();increase(props.producto)}} className="btn btn-outline-dark flex-shrink-0">
-                                        Agregar Mas
+                                        <i class="bi bi-plus-circle"></i>
                                     </button>
                                 )}
 
@@ -45,7 +45,6 @@ const ProductItem = (props)=>{
             </div>
         );
 }
-        
 export default ProductItem;
 
 // <button  type="submit" className="btn btn-outline-dark"  onClick={verDetalles}>Detalles</button>
