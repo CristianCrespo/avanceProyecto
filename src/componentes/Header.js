@@ -27,9 +27,14 @@ const Header = () => {
                 <div className="col-8 py-4 text-lefth mt-5">
                     <div className="col-md-12 d-flex justify-content-center" id="link">
                         <Link to='/' ><strong><a>Store</a></strong></Link>
-                        <Link to='/About'><strong><a>| About </a>  </strong></Link>
-                        <Link to='/Cart'><strong><a>| Cart ({itemCount})</a></strong></Link>
+                        <strong>|</strong>
+                        <Link to='/About'><strong><a> About </a>  </strong></Link>
+                        <strong>|</strong>
+                        <Link to='/Cart'><strong><a> Cart ({itemCount})</a></strong></Link>
                         <i className="bi bi-cart-fill"></i>
+                        {isAuthenticated() && (<li>
+                            <a href="/#" onClick={handleLogout}><strong>LogOut</strong></a>
+                        </li>)}
                     </div>
                     <hr></hr> 
                 </div>
